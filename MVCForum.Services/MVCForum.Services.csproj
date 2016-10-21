@@ -108,6 +108,12 @@
     <Compile Include="BannedWordService.cs" />
     <Compile Include="CacheService.cs" />
     <Compile Include="ConfigService.cs" />
+    <Compile Include="Data.NPoco\ContextPerRequest.cs" />
+    <Compile Include="Data.NPoco\Interceptors\DataInterceptor.cs" />
+    <Compile Include="Data.NPoco\Mapping\MemberMapping.cs" />
+    <Compile Include="Data.NPoco\NPocoDb.cs" />
+    <Compile Include="Data.NPoco\NPocoDbConfig.cs" />
+    <Compile Include="Data.NPoco\NPocoDbFactory.cs" />
     <Compile Include="Data\Context\MVCForumContext.cs" />
     <Compile Include="Data\Mapping\ActivityMapping.cs" />
     <Compile Include="Data\Mapping\BadgeMapping.cs" />
@@ -141,7 +147,6 @@
     <Compile Include="Data\Mapping\TopicTagMapping.cs" />
     <Compile Include="Data\Mapping\UploadedFileMapping.cs" />
     <Compile Include="Data\Mapping\VoteMapping.cs" />
-    <Compile Include="Data\NPoco\ContextPerRequest.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Data\UnitOfWork\UnitOfWork.cs" />
     <Compile Include="Data\UnitOfWork\UnitOfWorkManager.cs" />

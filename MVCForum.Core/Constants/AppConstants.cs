@@ -10,6 +10,11 @@ namespace MVCForum.Domain.Constants
         // Scheduled Tasks
         public const string DefaultTaskGroup = "MVCForumTaskGroup";
 
+        // Database Context (Connectionstring to Db)
+        // Moved to AppConstants in order to make NPoco work in a more
+        // or less decoupled manner.
+        public const string MvcForumContext = "MvcForumContext";
+
         // Cookie names
         public const string LanguageIdCookieName = "LanguageCulture";
         public const string MemberEmailConfirmationCookieName = "MVCForumEmailConfirmation";
@@ -73,6 +78,7 @@ namespace MVCForum.Domain.Constants
             "EntityFramework.dll",
             "EntityFramework.SqlServer.dll",
             "EntityFramework.SqlServerCompact.dll",
+            "NPoco.dll",
             "System.Data.SqlServerCe.dll",
             "Newtonsoft.Json.dll",
             "Quartz.dll",

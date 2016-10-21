@@ -40,8 +40,15 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
+    <Reference Include="NPoco, Version=3.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPoco.3.4.1\lib\net45\NPoco.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Helpers">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
@@ -91,6 +98,7 @@
     <Compile Include="DomainModel\Attributes\DescriptionAttribute.cs" />
     <Compile Include="DomainModel\Attributes\NameAttribute.cs" />
     <Compile Include="DomainModel\Attributes\IdAttribute.cs" />
+    <Compile Include="DomainModel\Entities.NPoco\Member.cs" />
     <Compile Include="DomainModel\Entities\Badge.cs" />
     <Compile Include="DomainModel\Entities\BannedEmail.cs" />
     <Compile Include="DomainModel\Entities\Category.cs" />
@@ -169,6 +177,8 @@
     <Compile Include="Interfaces\Badges\IVoteUpBadge.cs" />
     <Compile Include="Interfaces\Events\IEventHandler.cs" />
     <Compile Include="Interfaces\Events\IEventManager.cs" />
+    <Compile Include="Interfaces\NPoco\INPocoDb.cs" />
+    <Compile Include="Interfaces\NPoco\INPocoDbFactory.cs" />
     <Compile Include="Interfaces\Providers\IStorageProvider.cs" />
     <Compile Include="Interfaces\Services\IBlockService.cs" />
     <Compile Include="Interfaces\Services\ICacheService.cs" />

@@ -1,4 +1,8 @@
-﻿namespace MVCForum.Services.Data.NPoco
+﻿
+// Think this is no longer needed according to this:
+// http://stackoverflow.com/questions/1557592/is-using-a-singleton-for-the-connection-a-good-idea-in-asp-net-website
+
+namespace MVCForum.Services.Data.NPoco
 {
     using System.Web;
     using Domain.Constants;

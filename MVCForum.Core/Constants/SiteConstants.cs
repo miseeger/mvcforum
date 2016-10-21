@@ -157,7 +157,7 @@ namespace MVCForum.Domain.Constants
         public string PermissionInsertEditorImages => GetConfig("PermissionInsertEditorImages");
 
         // Database Connection Key
-        public string MvcForumContext => GetConfig("MvcForumContext");
+        public string MvcForumContext => AppConstants.MvcForumContext;
 
         // Default Theme folder
         public string ThemeRootFolder => GetConfig("ThemeRootFolder");

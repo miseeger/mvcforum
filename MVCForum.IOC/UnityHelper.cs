@@ -4,9 +4,11 @@ using MVCForum.Domain.Interfaces.Services;
 using MVCForum.Domain.Interfaces.UnitOfWork;
 using MVCForum.Services;
 using Microsoft.Practices.Unity;
+using MVCForum.Domain.Interfaces.Five01st;
 using MVCForum.IOC.Quartz;
 using MVCForum.Services.Data.Context;
 using MVCForum.Services.Data.UnitOfWork;
+using MVCForum.Services.Data.NPoco;
 
 namespace MVCForum.IOC
 {
@@ -48,12 +50,12 @@ namespace MVCForum.IOC
             // Database context, one per request, ensure it is disposed
             container.BindInRequestScope<IMVCForumContext, MVCForumContext>();
             container.BindInRequestScope<IUnitOfWorkManager, UnitOfWorkManager>();
-
+            container.BindInRequestScope<INPocoDbFactory, NPocoDbFactory>();
 
             // Quartz
             container.AddNewExtension<QuartzUnityExtension>();
 
-            //Bind the various domain model services and repositories that e.g. our controllers require         
+            //Bind the various domain model services and repositories that e.g. our controllers require
             container.BindInRequestScope<IUnitOfWorkManager, UnitOfWorkManager>();
             container.BindInRequestScope<IRoleService, RoleService>();
             container.BindInRequestScope<ICategoryService, CategoryService>();
