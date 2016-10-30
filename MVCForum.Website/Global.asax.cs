@@ -2,6 +2,7 @@
 using System.Globalization;
 using System.Threading;
 using System.Web;
+using System.Web.Hosting;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -14,6 +15,7 @@ using MVCForum.Utilities;
 using MVCForum.Website.Application;
 using MVCForum.Website.Application.ScheduledJobs;
 using MVCForum.Website.Application.ViewEngine;
+using NPocoMigrations;
 
 namespace MVCForum.Website
 {
@@ -36,6 +38,12 @@ namespace MVCForum.Website
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+
+            // Execute NPoco Migrations
+            using (var migrator = new NPocoMigrator(HostingEnvironment.MapPath(@"/App_Data")))
+            {
+                migrator.Migrate();
+            }
 
             // Start unity
             var unityContainer = UnityHelper.Start();

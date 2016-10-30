@@ -1,0 +1,5 @@
+{
+  "DbVersion": "0.0.0",
+  "DbConnection": "MVCForumContext",
+  "MigrationsDir": "Migrations"
+}
