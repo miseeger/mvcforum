@@ -1,5 +1,5 @@
 ﻿using MVCForum.Domain.Constants;
-using MVCForum.Domain.Interfaces.Five01st;
+using MVCForum.Domain.Interfaces.NPoco;
 
 namespace MVCForum.Services.Data.NPoco
 {

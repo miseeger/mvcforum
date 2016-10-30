@@ -1,7 +1,4 @@
-﻿using System;
-using MVCForum.Domain.DomainModel;
-
-namespace MVCForum.Domain.Interfaces.Five01st
+﻿namespace MVCForum.Domain.Interfaces.NPoco
 {
 
 	public interface INPocoDbFactory

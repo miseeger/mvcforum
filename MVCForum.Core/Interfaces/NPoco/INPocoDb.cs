@@ -1,7 +1,6 @@
-﻿using System;
-using NPoco;
+﻿using NPoco;
 
-namespace MVCForum.Domain.Interfaces.Five01st
+namespace MVCForum.Domain.Interfaces.NPoco
 {
 
 	public interface INPocoDb : IDatabase

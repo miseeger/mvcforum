@@ -1,4 +1,4 @@
-﻿using MVCForum.Domain.Interfaces.Five01st;
+﻿using MVCForum.Domain.Interfaces.NPoco;
 using NPoco;
 
 namespace MVCForum.Services.Data.NPoco
